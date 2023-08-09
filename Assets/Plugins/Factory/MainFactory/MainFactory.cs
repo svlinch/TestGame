@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using Zenject;
 
 namespace Assets.Scripts.Factories
 {
@@ -10,15 +9,6 @@ namespace Assets.Scripts.Factories
         {
             public GameObject Prefab;
         }
-
-        #region Injection
-        private DiContainer _container;
-
-        public MainFactory(DiContainer container)
-        {
-            _container = container;
-        }
-        #endregion
 
         private readonly Dictionary<string, Template> _loadedTemplates = new Dictionary<string, Template>();
 
@@ -74,7 +64,6 @@ namespace Assets.Scripts.Factories
             }
             result.transform.position = description.Position;
 
-            _container.InjectGameObject(result);
             return result;
         }
     }

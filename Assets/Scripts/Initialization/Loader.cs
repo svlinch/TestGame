@@ -1,15 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Zenject;
 
 public class Loader : MonoBehaviour
 {
     private List<IStarter> _startList;
     private EventService _eventService;
     
-    [Inject]
-    private void Inject(EventService eventService, GamePlayController gamePlayController, BalanceManager balanceManager,
+    public void Inject(EventService eventService, GamePlayController gamePlayController, BalanceManager balanceManager,
             PlayerLogic playerLogic, EnemiesLogic enemiesLogic)
     {
         _eventService = eventService;

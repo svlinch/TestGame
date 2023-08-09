@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Assets.Scripts.Factories;
 using Assets.Scripts.Utility;
-using Zenject;
 using UniRx;
 
 public class EnemiesLogic: IStarter
@@ -15,11 +14,10 @@ public class EnemiesLogic: IStarter
     private BalanceManager _balanceManager;
     private SubscriptionHolder _subscriptions;
 
-    [Inject]
-    private void Inject(EventService eventService, IObjectFactory factory, BalanceManager balanceManager)
+    public void Inject(EventService eventService, MainFactory factory, BalanceManager balanceManager)
     {
         _eventService = eventService;
-        _factory = new PoolFactory(factory, "enemies");
+        _factory = new PoolFactory(factory as IObjectFactory, "enemies");
         _balanceManager = balanceManager;
 
         _subscriptions = new SubscriptionHolder(eventService);

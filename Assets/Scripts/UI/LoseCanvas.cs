@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using Zenject;
 using TMPro;
 using UniRx;
 
@@ -10,8 +9,7 @@ public class LoseCanvas : MonoBehaviour
     private EventService _eventService;
     private SubscriptionHolder _subscriptions;
 
-    [Inject]
-    private void Inject(EventService eventService)
+    public void Inject(EventService eventService)
     {
         _eventService = eventService;
         _subscriptions = new SubscriptionHolder(_eventService);

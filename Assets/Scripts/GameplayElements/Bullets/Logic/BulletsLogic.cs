@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Zenject;
 using Assets.Scripts.Factories;
 
 public class BulletsLogic
@@ -10,13 +9,13 @@ public class BulletsLogic
     private PoolFactory _poolFactory;
     private BalanceManager _balanceManager;
 
-    [Inject]
-    private void Inject(EventService eventService, IObjectFactory factory, BalanceManager balanceManager)
+    public void Inject(EventService eventService, BalanceManager balanceManager, MainFactory mainFactory)
     {
         _eventService = eventService;
         _balanceManager = balanceManager;
+        var iFactory = mainFactory as IObjectFactory;
 
-        _poolFactory = new PoolFactory(factory, "bullets");
+        _poolFactory = new PoolFactory(mainFactory, "bullets");
 
         _subscriptions = new SubscriptionHolder(_eventService);
         _subscriptions.Subscribe<WeaponActEvent>(WeaponActHandle);

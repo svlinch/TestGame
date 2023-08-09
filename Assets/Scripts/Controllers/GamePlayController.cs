@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using UnityEngine;
-using Zenject;
 
 public class GamePlayController : MonoBehaviour, IStarter
 {
@@ -13,8 +12,7 @@ public class GamePlayController : MonoBehaviour, IStarter
 
     private SubscriptionHolder _subscriptions;
 
-    [Inject]
-    private void Inject(ITimeService timeService, EventService eventService, BulletsLogic bulletsLogic, 
+    public void Inject(TimeService timeService, EventService eventService, BulletsLogic bulletsLogic, 
                 EnemiesLogic enemiesLogic, PlayerLogic playerLogic)
     {
         _timeService = timeService;

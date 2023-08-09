@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Assets.Scripts.Factories;
-using Zenject;
 using UniRx;
 
 public class PlayerLogic: IStarter
@@ -14,10 +13,9 @@ public class PlayerLogic: IStarter
     private IObjectFactory _factory;
     private SubscriptionHolder _subscriptions;
 
-    [Inject]
-    private void Inject(EventService eventService, IObjectFactory factory, BalanceManager balanceManager)
+    public void Inject(EventService eventService, MainFactory factory, BalanceManager balanceManager)
     {
-        _factory = factory;
+        _factory = factory as IObjectFactory;
         _balanceManager = balanceManager;
 
          _eventService = eventService;

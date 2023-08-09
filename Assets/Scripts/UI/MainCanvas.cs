@@ -1,5 +1,4 @@
 using UnityEngine;
-using Zenject;
 using TMPro;
 using UniRx;
 
@@ -9,8 +8,7 @@ public class MainCanvas : MonoBehaviour
     private EventService _eventService;
     private SubscriptionHolder _subscriptions;
 
-    [Inject]
-    private void Inject(EventService eventService)
+    public void Inject(EventService eventService)
     {
         _eventService = eventService;
 

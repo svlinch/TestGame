@@ -1,14 +1,12 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using Zenject;
 
 public class InputController : MonoBehaviour
 {
     #region Injection
     private EventService _eventService;
     
-    [Inject]
-    private void Inject(EventService eventService)
+    public void Inject(EventService eventService)
     {
         _eventService = eventService;
     }

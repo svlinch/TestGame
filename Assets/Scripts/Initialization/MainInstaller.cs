@@ -1,16 +1,16 @@
-using Zenject;
+using UnityEngine;
 using Assets.Scripts.Factories;
 
-public class MainInstaller : MonoInstaller
+public class MainInstaller : Installer
 {
-    public override void InstallBindings()
+    private void Awake()
     {
-        Container.Bind<EventService>().AsSingle().NonLazy();
-        Container.Bind<BalanceManager>().AsSingle().NonLazy();
-        Container.Bind<BulletsLogic>().AsSingle().NonLazy();
-        Container.BindInterfacesAndSelfTo<TimeService>().AsSingle().NonLazy();
-        Container.BindInterfacesAndSelfTo<MainFactory>().AsSingle().NonLazy();
-        Container.Bind<EnemiesLogic>().AsSingle().NonLazy();
-        Container.Bind<PlayerLogic>().AsSingle().NonLazy();
+        _container.Register<EventService>();
+        _container.Register<MainFactory>();
+        _container.Register<BalanceManager>();
+        _container.Register<BulletsLogic>();
+        _container.Register<TimeService>();
+        _container.Register<EnemiesLogic>();
+        _container.Register<PlayerLogic>();
     }
 }

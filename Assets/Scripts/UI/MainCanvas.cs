@@ -43,7 +43,7 @@ public class MainCanvas : MonoBehaviour
     private bool HandleWeaponInitialized(WeaponInitializedEvent e)
     {
         e.Charge.Subscribe(x => _textCharge.text = x.ToString("F1"));
-        e.Stash.Subscribe(x => _textStash.text = x.ToString("F1"));
+        e.Stash.Subscribe(x => _textStash.text = x.ToString());
         return true;
     }
 

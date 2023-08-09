@@ -1,13 +1,12 @@
 using UnityEngine;
-using UniRx;
 
 public class ShipInitializedEvent
 {
-    public ReactiveProperty<float> Speed;
-    public ReactiveProperty<float> Angle;
-    public ReactiveProperty<Vector2> Position;
+    public CustomProperty<float> Speed;
+    public CustomProperty<float> Angle;
+    public CustomProperty<Vector2> Position;
 
-    public ShipInitializedEvent(ReactiveProperty<float> speed, ReactiveProperty<float> angle, ReactiveProperty<Vector2> position)
+    public ShipInitializedEvent(CustomProperty<float> speed, CustomProperty<float> angle, CustomProperty<Vector2> position)
     {
         Speed = speed;
         Angle = angle;

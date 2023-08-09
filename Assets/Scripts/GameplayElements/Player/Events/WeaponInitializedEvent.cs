@@ -1,11 +1,9 @@
-using UniRx;
-
 public class WeaponInitializedEvent
 {
-    public ReactiveProperty<uint> Stash;
-    public ReactiveProperty<float> Charge;
+    public CustomProperty<uint> Stash;
+    public CustomProperty<float> Charge;
 
-    public WeaponInitializedEvent(ReactiveProperty<uint> stash, ReactiveProperty<float> charge)
+    public WeaponInitializedEvent(CustomProperty<uint> stash, CustomProperty<float> charge)
     {
         Stash = stash;
         Charge = charge;

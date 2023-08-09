@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Assets.Scripts.Factories;
-using UniRx;
 
 public class PlayerLogic: IStarter
 {
@@ -28,7 +27,7 @@ public class PlayerLogic: IStarter
     }
     #endregion
 
-    private ReactiveProperty<uint> _score;
+    private CustomProperty<uint> _score;
     private WeaponsLogic _weaponsLogic;
     private PlayerMoveLogic _moveLogic;
 
@@ -47,7 +46,7 @@ public class PlayerLogic: IStarter
         var unit = _factory.Create(description).GetComponent<PlayerUnit>();
         _moveLogic = new PlayerMoveLogic(unit, template, _eventService);
 
-        _score = new ReactiveProperty<uint>(0);
+        _score = new CustomProperty<uint>();
         _eventService.SendMessage(new PlayerInitializedEvent(_score));
         yield return null;
     }

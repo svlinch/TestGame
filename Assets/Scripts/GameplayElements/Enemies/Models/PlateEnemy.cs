@@ -1,11 +1,10 @@
 using UnityEngine;
-using UniRx;
 
 public class PlateEnemy : AsteroidEnemy
 {
     private Vector2 _lastPlayerPosition;
 
-    public PlateEnemy(ReactiveProperty<Vector2> playerPosition)
+    public PlateEnemy(CustomProperty<Vector2> playerPosition)
     {
         playerPosition.Subscribe(x => _lastPlayerPosition = x);
     }

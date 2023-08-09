@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Assets.Scripts.Factories;
 using Assets.Scripts.Utility;
-using UniRx;
 
 public class EnemiesLogic: IStarter
 {
@@ -30,12 +29,12 @@ public class EnemiesLogic: IStarter
 
     private List<Enemy> _enemies;
     private GameTimer _spawnTimer;
-    private ReactiveProperty<Vector2> _lastPlayerPosition;
+    private CustomProperty<Vector2> _lastPlayerPosition;
 
     public IEnumerator Initialize()
     {
         _spawnTimer = new GameTimer(_balanceManager.GetSettings().GetSpawnInterval());
-        _lastPlayerPosition = new ReactiveProperty<Vector2>();
+        _lastPlayerPosition = new CustomProperty<Vector2>();
         _enemies = new List<Enemy>();
         _enemies.Capacity = (int)_balanceManager.GetSettings().GetMaxEnemies();
         yield return null;

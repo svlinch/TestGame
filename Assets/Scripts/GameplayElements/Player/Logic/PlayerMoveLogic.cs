@@ -1,5 +1,4 @@
 using UnityEngine;
-using UniRx;
 
 public class PlayerMoveLogic
 {
@@ -8,9 +7,9 @@ public class PlayerMoveLogic
     private PlayerUnit _unit;
     private PlayerTemplate _template;
 
-    private ReactiveProperty<float> _speed;
-    private ReactiveProperty<float> _angle;
-    private ReactiveProperty<Vector2> _position;
+    private CustomProperty<float> _speed;
+    private CustomProperty<float> _angle;
+    private CustomProperty<Vector2> _position;
 
     private bool _acceleration;
     private Vector2 _rotateDirection;
@@ -23,9 +22,9 @@ public class PlayerMoveLogic
 
         _unit.SetCallbacks(HandleBorder, HandleEnemy);
 
-        _speed = new ReactiveProperty<float>(0f);
-        _angle = new ReactiveProperty<float>(0f);
-        _position = new ReactiveProperty<Vector2>(Vector2.zero);
+        _speed = new CustomProperty<float>();
+        _angle = new CustomProperty<float>();
+        _position = new CustomProperty<Vector2>();
 
         _eventService.SendMessage(new ShipInitializedEvent(_speed, _angle, _position));
     }

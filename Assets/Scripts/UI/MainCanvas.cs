@@ -1,6 +1,5 @@
 using UnityEngine;
 using TMPro;
-using UniRx;
 
 public class MainCanvas : MonoBehaviour
 {

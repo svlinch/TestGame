@@ -1,5 +1,4 @@
 using Assets.Scripts.Utility;
-using UniRx;
 
 public class WeaponModel
 {
@@ -7,15 +6,15 @@ public class WeaponModel
 
     private WeaponTemplate _template;
     private GameTimer _chargeTimer;
-    private ReactiveProperty<uint> _stash;
-    private ReactiveProperty<float> _charge;
+    private CustomProperty<uint> _stash;
+    private CustomProperty<float> _charge;
 
     public WeaponModel(WeaponTemplate template, EventService eventService)
     {
         _eventService = eventService;
         _template = template;
-        _stash = new ReactiveProperty<uint>(0);
-        _charge = new ReactiveProperty<float>(0);
+        _stash = new CustomProperty<uint>();
+        _charge = new CustomProperty<float>();
 
         if (_template.GetStashSize() > 0)
         {

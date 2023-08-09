@@ -1,10 +1,8 @@
-using UniRx;
-
 public class PlayerInitializedEvent
 {
-    public ReactiveProperty<uint> Score;
+    public CustomProperty<uint> Score;
 
-    public PlayerInitializedEvent(ReactiveProperty<uint> score)
+    public PlayerInitializedEvent(CustomProperty<uint> score)
     {
         Score = score;
     }

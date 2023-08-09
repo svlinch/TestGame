@@ -1,0 +1,17 @@
+{
+    "name": "ADData",
+    "rootNamespace": "",
+    "references": [
+        "GUID:c75117f416672214aa76b1bbaec1af2c",
+        "GUID:5eb9b0d6263131844a3ac40181ad7e11"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

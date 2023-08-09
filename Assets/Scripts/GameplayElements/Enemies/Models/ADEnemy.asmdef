@@ -1,0 +1,20 @@
+{
+    "name": "ADEnemy",
+    "rootNamespace": "",
+    "references": [
+        "GUID:ea844816f0446a74a9ca26d6fd80cfe9",
+        "GUID:25ac671fb83bb5149a6a55ea01dd7eaa",
+        "GUID:560b04d1a97f54a4e82edc0cbbb69285",
+        "GUID:c75117f416672214aa76b1bbaec1af2c",
+        "GUID:56201e8b89a8ee445a9856cd1ce2db72"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

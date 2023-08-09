@@ -1,0 +1,5 @@
+{
+	"_enemySpawnInterval": 1,
+	"_maxEnemiesCount": 30,
+	"_availableEnemies": ["BigAsteroid", "Plate"]
+}

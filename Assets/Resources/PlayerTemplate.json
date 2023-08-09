@@ -1,0 +1,7 @@
+{
+	"_weaponsIds": ["cannon", "laser"],
+	"_maxSpeed": 5,
+	"accelerationSpeed": 3,
+	"_momentum": -4,
+	"_rotationSpeed": 250,
+}

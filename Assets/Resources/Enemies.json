@@ -1,0 +1,23 @@
+{
+	"_templates":
+	[
+		{
+			"_id": "BigAsteroid",
+			"_speed": 2,
+			"_enemyType": "BigAsteroid",
+			"_scoreReward": 50
+		},
+		{
+			"_id": "Asteroid",
+			"_speed": 4,
+			"_enemyType": "Asteroid",
+			"_scoreReward": 10
+		},
+		{
+			"_id": "Plate",
+			"_speed": 3,
+			"_enemyType": "Plate",
+			"_scoreReward": 30
+		}
+	]
+}

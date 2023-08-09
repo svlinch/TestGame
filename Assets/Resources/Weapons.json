@@ -1,0 +1,15 @@
+{
+	"_templates": 
+	[
+		{
+			"_id": "cannon",
+			"_spawnId": "cannonShot"
+		},
+		{
+			"_id": "laser",
+			"_spawnId": "laserShot",
+			"_chargeTime": 3,
+			"_stashSize": 3,
+		}
+	]
+}

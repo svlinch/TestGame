@@ -1,0 +1,21 @@
+{
+    "name": "ADBulletLogic",
+    "rootNamespace": "",
+    "references": [
+        "GUID:ea844816f0446a74a9ca26d6fd80cfe9",
+        "GUID:4916a02e3e5b8d347ba2c8a41c7c2fd1",
+        "GUID:25ac671fb83bb5149a6a55ea01dd7eaa",
+        "GUID:350731995be3a9f4482b82c510a29680",
+        "GUID:c75117f416672214aa76b1bbaec1af2c",
+        "GUID:35becce1d135c42468676660b510e4c9"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

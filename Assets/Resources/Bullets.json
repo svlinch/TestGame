@@ -1,0 +1,19 @@
+{
+	"_templates": 
+	[
+		{
+			"_id": "cannonShot",
+			"_lifeTime": 2,
+			"_speed": 32,
+			"_letality": false,
+			"_destructible": true
+		},
+		{
+			"_id": "laserShot",
+			"_lifeTime": 1,
+			"_speed": 50,
+			"_letality": true,
+			"_destructible": false
+		}
+	]
+}

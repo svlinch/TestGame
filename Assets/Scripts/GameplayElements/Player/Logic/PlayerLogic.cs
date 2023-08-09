@@ -63,10 +63,6 @@ public class PlayerLogic: IStarter
     {
         _moveLogic.HandleUpdate(dTime);
         _weaponsLogic.HandleUpdate(dTime);
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            _eventService.SendMessage(new GameStateChangeEvent(false));
-        }
     }
 
     private bool HandleMoveEvent(MoveEvent e)

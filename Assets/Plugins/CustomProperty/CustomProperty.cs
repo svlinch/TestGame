@@ -23,4 +23,9 @@ public class CustomProperty<T>
     {
         _actions.Add(action);
     }
+
+    public void Unsubscribe(Action<T> action)
+    {
+        _actions.Remove(action);
+    }
 }

@@ -1,21 +1,24 @@
 using UnityEngine;
 
-public class Installer : MonoBehaviour
+namespace CustomContainer
 {
-    protected Container _container;
-
-    public void Resolve(Component component)
+    public class Installer : MonoBehaviour
     {
-        _container.Resolve(component);
-    }
+        protected Container _container;
 
-    public void Bind(Component component)
-    {
-        _container.Register(component);
-    }
+        public void Resolve(GameObject obj)
+        {
+            _container.Resolve(obj);
+        }
 
-    public void SetContainer(Container container)
-    {
-        _container = container;
+        public void Bind(Component component)
+        {
+            _container.Register(component);
+        }
+
+        public void SetContainer(Container container)
+        {
+            _container = container;
+        }
     }
 }

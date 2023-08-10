@@ -1,5 +1,6 @@
 using UnityEngine;
 using Assets.Scripts.Factories;
+using CustomContainer;
 
 public class MainInstaller : Installer
 {

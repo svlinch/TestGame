@@ -1,18 +1,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SceneContext : MonoBehaviour
+namespace CustomContainer
 {
-    public readonly Container Container = new Container();
-
-    [SerializeField]
-    private List<Installer> _installers;
-
-    private void Awake()
+    public class SceneContext : MonoBehaviour
     {
-        foreach(var installer in _installers)
+        public readonly Container Container = new Container();
+
+        [SerializeField]
+        private List<Installer> _installers;
+
+        private void Awake()
         {
-            installer.SetContainer(Container);
+            foreach (var installer in _installers)
+            {
+                installer.SetContainer(Container);
+            }
         }
     }
 }

@@ -1,18 +1,16 @@
 using System;
 using UnityEngine;
 
-public class Resolver : MonoBehaviour
+namespace CustomContainer
 {
-    [SerializeField]
-    private Installer _installer;
-
-    private void Awake()
+    public class Resolver : MonoBehaviour
     {
-        var attachs = gameObject.GetComponents<Component>();
-        foreach (var attach in attachs)
+        [SerializeField]
+        private Installer _installer;
+
+        private void Awake()
         {
-            var type = attach.GetType();
-            _installer.Resolve(attach);
+            _installer.Resolve(gameObject);
         }
     }
 }

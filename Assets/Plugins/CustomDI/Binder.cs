@@ -1,30 +1,33 @@
 using System;
 using UnityEngine;
 
-public class Binder : MonoBehaviour
+namespace CustomContainer
 {
-    [SerializeField]
-    private Installer _installer;
-
-    private void Awake()
+    public class Binder : MonoBehaviour
     {
-        var attachs = gameObject.GetComponents<Component>();
-        foreach(var attach in attachs)
+        [SerializeField]
+        private Installer _installer;
+
+        private void Awake()
         {
-            var type = attach.GetType();
-            if (AvailableComponent(attach.GetType()))
+            var attachs = gameObject.GetComponents<Component>();
+            foreach (var attach in attachs)
             {
-                _installer.Bind(attach);
+                var type = attach.GetType();
+                if (AvailableComponent(attach.GetType()))
+                {
+                    _installer.Bind(attach);
+                }
             }
         }
-    }
 
-    private bool AvailableComponent(Type type)
-    {
-        if (type == typeof(Installer) || type == typeof(Transform) || type == typeof(Binder))
+        private bool AvailableComponent(Type type)
         {
-            return false;
+            if (type == typeof(Installer) || type == typeof(Transform) || type == typeof(Binder))
+            {
+                return false;
+            }
+            return true;
         }
-        return true;
     }
 }
